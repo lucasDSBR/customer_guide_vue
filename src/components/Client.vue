@@ -1,14 +1,18 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+	{{name}}
+	<input type="text" name="" id="" :value="name">
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: 'Client',
+  data() {
+	return {
+		name: "Lucas"
+	}
   }
 }
 </script>
