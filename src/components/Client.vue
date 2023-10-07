@@ -1,17 +1,35 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+<!-- eslint-disable vue/no-dupe-keys -->
 <template>
   <div class="hello">
-	{{name}}
-	<input type="text" name="" id="" :value="name">
+	<h4>{{name}}</h4>
+	<button @click="mudarCor">Mudar Cor!</button>
   </div>
 </template>
 
 <script>
 export default {
+
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Client',
   data() {
 	return {
-		name: "Lucas"
+		name: "Lucas",
+		description: "sadasdkajld",
+		isPremium: false
+	}
+  },
+  props: {
+	// eslint-disable-next-line vue/no-dupe-keys
+	msg: String,
+	showText: Boolean,
+	// eslint-disable-next-line vue/no-dupe-keys
+	name: String,
+	totSallers: Number
+  },
+  methods: {
+	mudarCor: function(){
+		alert("Chamour")
 	}
   }
 }
@@ -32,5 +50,13 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.client-premium {
+	color: red;
+}
+
+.client {
+	color: green;
 }
 </style>
